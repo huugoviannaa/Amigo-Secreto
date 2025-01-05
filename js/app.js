@@ -1,4 +1,6 @@
 let listagem = [];
+
+//função para adicionar os nomes dos sorteados
 function adicionar(){
     let nomeAmigo = document.getElementById('nome-amigo').value;
     let listaAmigos = document.getElementById('lista-amigos');
@@ -7,6 +9,7 @@ function adicionar(){
     nomeAmigo = document.getElementById('nome-amigo').value = '';
 }
 
+//função para sortear os numeros
 function sortear(){
     let listaSorteio = document.getElementById('lista-sorteio');
     listagem.sort((a,b) => Math.random() - 0.5);
@@ -23,10 +26,11 @@ function sortear(){
     }    
 }
 
+//função para reiniciar o sorteador
 function reiniciar(){
     listagem = [];
     listaAmigos = document.getElementById('lista-amigos').textContent = '';
     listaSorteio = document.getElementById('lista-sorteio').textContent = '';
     console.log(listagem);
-    
+
 }
